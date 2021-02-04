@@ -366,9 +366,9 @@ LSTATUS RemoveDirectoryAndSubdirectories(
 		{
 			std::wcout << pszFileBuffer.c_str() + 8 << std::endl;
 		}
-		else if (pszFileBuffer.find(L"\\\\?\\", 4) == 0)
+		else if (pszFileBuffer.find(L"\\\\?\\") == 0)
 		{
-			std::wcout << pszFileBuffer.c_str() << std::endl;
+			std::wcout << pszFileBuffer.c_str() + 4 << std::endl;
 		}
 		else
 		{
